@@ -62,12 +62,56 @@
 	  <None Remove="Resources\Fonts\Poppins-Medium.ttf" />
 	  <None Remove="Resources\Fonts\Poppins-Regular.ttf" />
 	  <None Remove="Resources\Fonts\Poppins-SemiBold.ttf" />
+	  <None Remove="Resources\Images\Background.svg" />
+	  <None Remove="Resources\Images\background_buttons.svg" />
+	  <None Remove="Resources\Images\background_login.svg" />
+	  <None Remove="Resources\Images\background_perfil.svg" />
+	  <None Remove="Resources\Images\box_arrow_left.svg" />
+	  <None Remove="Resources\Images\credit_card.svg" />
+	  <None Remove="Resources\Images\edit_perfil.svg" />
+	  <None Remove="Resources\Images\edit_photo.svg" />
+	  <None Remove="Resources\Images\email.svg" />
+	  <None Remove="Resources\Images\eye_on.svg" />
+	  <None Remove="Resources\Images\key.svg" />
+	  <None Remove="Resources\Images\line.svg" />
+	  <None Remove="Resources\Images\LoginIcons\apple.svg" />
+	  <None Remove="Resources\Images\LoginIcons\chave.svg" />
+	  <None Remove="Resources\Images\LoginIcons\facebook.svg" />
+	  <None Remove="Resources\Images\LoginIcons\google_icon.svg" />
+	  <None Remove="Resources\Images\LoginIcons\menos.svg" />
+	  <None Remove="Resources\Images\LoginIcons\olho.svg" />
+	  <None Remove="Resources\Images\LoginIcons\plus.svg" />
+	  <None Remove="Resources\Images\LoginIcons\procurar.svg" />
+	  <None Remove="Resources\Images\LoginIcons\question_circle.svg" />
+	  <None Remove="Resources\Images\LoginIcons\seta.svg" />
+	  <None Remove="Resources\Images\LoginIcons\trash.svg" />
+	  <None Remove="Resources\Images\LoginIcons\x_circle.svg" />
+	  <None Remove="Resources\Images\logo.svg" />
+	  <None Remove="Resources\Images\password.svg" />
+	  <None Remove="Resources\Images\person_entry.svg" />
+	  <None Remove="Resources\Images\settings.svg" />
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
-		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
+		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
+		<PackageReference Include="Microsoft.Maui.Controls" Version="8.0.14" />
+		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="8.0.14" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Resource Include="Resources\Images\apple.svg" />
+	  <Resource Include="Resources\Images\chave.svg" />
+	  <Resource Include="Resources\Images\facebook.svg" />
+	  <Resource Include="Resources\Images\google_icon.svg" />
+	  <Resource Include="Resources\Images\menos.svg" />
+	  <Resource Include="Resources\Images\eye_off.svg" />
+	  <Resource Include="Resources\Images\plus.svg" />
+	  <Resource Include="Resources\Images\procurar.svg" />
+	  <Resource Include="Resources\Images\question_circle.svg" />
+	  <Resource Include="Resources\Images\seta.svg" />
+	  <Resource Include="Resources\Images\trash.svg" />
+	  <Resource Include="Resources\Images\x_circle.svg" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -104,6 +148,11 @@
 	  <MauiXaml Update="Views\TypeLoginPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Resources\Images\LoginIcons\" />
+	  <Folder Include="Resources\Images\TabBarIcons\" />
 	</ItemGroup>
 
 </Project>

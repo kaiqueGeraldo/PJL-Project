@@ -1,12 +1,44 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:models="clr-namespace:PJL_Project.Models"
+             xmlns:vm="clr-namespace:PJL_Project.ViewModels"
+             x:DataType="vm:PerfilViewModel"
              x:Class="PJL_Project.Views.PerfilPage"
-             Title="PerfilPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             Title="PerfilPage"
+             Shell.NavBarIsVisible="False">
+    <StackLayout>
+        <Image Source="background_perfil.svg"/>
+        <Image Source="logo.svg"
+               WidthRequest="200"
+               Margin="0,-250,0,10"/>
+
+        <ImageButton Source="settings.svg"
+                     WidthRequest="25"
+                     HorizontalOptions="End"
+                     Margin="0,59,15,-100"/>
+
+        <Frame WidthRequest="150"
+               HeightRequest="150"
+               CornerRadius="75">
+            <Image Source="{DataTemplate models:Usuario}"/>
+        </Frame>
+
+        <Frame BackgroundColor="{StaticResource Quintiary}"
+               WidthRequest="35"
+               HeightRequest="35"
+               CornerRadius="20"
+               Margin="120,-50,0,0"
+               Padding="3,0,0,0"
+               BorderColor="Transparent">
+
+            <ImageButton Source="edit_photo.svg"
+               WidthRequest="20"
+               HeightRequest="22"/>
+        </Frame>
+
+        <Label Text="{DataTemplate models:Usuario}"/>
+
+
+    </StackLayout>
 </ContentPage>

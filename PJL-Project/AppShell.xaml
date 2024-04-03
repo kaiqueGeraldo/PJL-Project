@@ -14,27 +14,27 @@
         Route="TypeLoginPage" />
 
     <TabBar>
-        <Tab Title="Home">
+        <Tab Title="Home" Icon="house.svg">
             <ShellContent ContentTemplate="{DataTemplate views:HomePage}"
                    Route="HomePage"/>
         </Tab>
 
-        <Tab Title="Category">
+        <Tab Title="Category" Icon="list_task.svg">
             <ShellContent ContentTemplate="{DataTemplate views:CategoryPage}"
                    Route="CategoryPage"/>
         </Tab>
 
-        <Tab Title="Bag">
+        <Tab Title="Bag" Icon="bag.svg">
             <ShellContent ContentTemplate="{DataTemplate views:BagPage}"
                    Route="BagPage"/>
         </Tab>
 
-        <Tab Title="Saves">
+        <Tab Title="Saves" Icon="heart.svg">
             <ShellContent ContentTemplate="{DataTemplate views:BookmarkPage}"
                    Route="BookmarkPage"/>
         </Tab>
 
-        <Tab Title="Perfil">
+        <Tab Title="Perfil" Icon="person.svg">
             <ShellContent ContentTemplate="{DataTemplate views:PerfilPage}"
                    Route="PerfilPage"/>
         </Tab>

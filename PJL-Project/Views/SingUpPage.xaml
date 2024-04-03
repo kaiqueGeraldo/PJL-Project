@@ -1,12 +1,129 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:models="clr-namespace:PJL_Project.Models"
+             xmlns:vm="clr-namespace:PJL_Project.ViewModels"
+             x:DataType="vm:SingUpViewModel"
              x:Class="PJL_Project.Views.SingUpPage"
-             Title="SingUpPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             BackgroundColor="#131316"
+             Shell.NavBarHasShadow="False">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="question_circle.svg"/>
+    </ContentPage.ToolbarItems>
+
+    <StackLayout HorizontalOptions="Center">
+
+        <Image Source="logo.svg"
+               WidthRequest="243"
+               Margin="0,30"/>
+
+        <StackLayout>
+            <Label Text="Get Started Free!"
+                   FontAttributes="Bold"
+                   FontSize="40"
+                   HorizontalTextAlignment="Center"/>
+
+            <Label Text="Free Forever. No Credit Card Needed!"
+                   FontSize="14"
+                   TextColor="#A4A4A4"
+                   HorizontalTextAlignment="Center"
+                   Margin="0,0,0,20"/>
+
+            <Label Text="Your Name"
+                   TextColor="#A4A4A4"
+                   FontSize="18"
+                   Margin="45,0,0,0"/>
+            <Frame WidthRequest="314"
+                   HeightRequest="55"
+                   Margin="0,0,0,15">
+                <HorizontalStackLayout Spacing="20">
+                    <Image Source="person_entry.svg"/>
+                    <Entry Text="{Binding Nome}"
+                           Placeholder="@yourUsername"
+                           WidthRequest="314"
+                           HeightRequest="75"/>
+                </HorizontalStackLayout>
+            </Frame>
+
+            <Label Text="Email Adress"
+                   TextColor="#A4A4A4"
+                   FontSize="18"
+                   Margin="45,0,0,0"/>
+            <Frame WidthRequest="314"
+                   HeightRequest="55"
+                   Margin="0,0,0,15">
+                <HorizontalStackLayout Spacing="20">
+                    <Image Source="email.svg"/>
+                    <Entry Text="{Binding Email}"
+                           Placeholder="youremail@gmail.com"
+                           WidthRequest="314"
+                           HeightRequest="75"/>
+                </HorizontalStackLayout>
+            </Frame>
+
+            <Label Text="Password"
+                   TextColor="#A4A4A4"
+                   FontSize="18"
+                   Margin="45,0,0,0"/>
+            <Frame WidthRequest="314"
+                   HeightRequest="55"
+                   Margin="0,0,0,25">
+                <HorizontalStackLayout Spacing="20">
+                    <Image Source="key.svg"/>
+                    <Entry Text="{Binding Senha}"
+                           Placeholder="*******"
+                           x:Name="SenhaEntry"
+                           WidthRequest="185"
+                           HeightRequest="75"
+                           IsPassword="True"/>
+                    <ImageButton Source="eye_off.svg" x:Name="EyeOff" IsVisible="True" HorizontalOptions="EndAndExpand" Clicked="ShowPassword_Clicked"/>
+                    <ImageButton Source="eye_on.svg" x:Name="EyeOn" IsVisible="False" Margin="0,0,0,0" Clicked="HidePassword_Clicked"/>
+                </HorizontalStackLayout>
+            </Frame>
+
+            <Button Text="Login"
+                    TextColor="white"
+                    FontSize="18"
+                    FontAttributes="Bold"
+                    WidthRequest="314"
+                    HeightRequest="50"
+                    CornerRadius="15"
+                    Margin="0,0,0,20"
+                    Command="{Binding CadastrarCommand}">
+                <Button.Background>
+                    <LinearGradientBrush StartPoint="0.2,0" EndPoint="1,0">
+                        <GradientStop Color="#98A8B7" Offset="0" />
+                        <GradientStop Color="#092640" Offset="1" />
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+
+            <HorizontalStackLayout Spacing="10" HorizontalOptions="Center" Margin="0,0,0,20">
+                <Image Source="line.svg"/>
+
+                <Label Text="Or continue with"
+                   TextColor="#B6B6B6"/>
+
+                <Image Source="line.svg"
+                   Rotation="180"/>
+            </HorizontalStackLayout>
+
+            <Grid HorizontalOptions="Center" ColumnDefinitions="*,*,*" ColumnSpacing="20">
+                <ImageButton Source="background_buttons.svg" Grid.Column="0"/>
+                <Image Source="google_icon.svg" Grid.Column="0" WidthRequest="24"/>
+
+                <ImageButton Source="background_buttons.svg" Grid.Column="1" />
+                <Image Source="apple.svg" Grid.Column="1" WidthRequest="24"/>
+
+                <ImageButton Source="background_buttons.svg" Grid.Column="2"/>
+                <Image Source="facebook.svg" Grid.Column="2" WidthRequest="24"/>
+            </Grid>
+        </StackLayout>
+
+        <Image Source="background_login.svg"
+               VerticalOptions="EndAndExpand"
+               HeightRequest="700"
+               Margin="0,0,0,0"/>
+    </StackLayout>
+
 </ContentPage>

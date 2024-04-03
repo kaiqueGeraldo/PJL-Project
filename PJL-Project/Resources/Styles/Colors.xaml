@@ -10,12 +10,13 @@
     <Color x:Key="Secondary">#78A5CC</Color>
     <Color x:Key="Tertiary">#98A8B7</Color>
     <Color x:Key="Quartiary">#CFE8FF</Color>
+    <Color x:Key="Quintiary">#0A66C2</Color>
     <Color x:Key="PrimaryDark">#ac99ea</Color>
     <Color x:Key="PrimaryDarkText">#242424</Color>
     <Color x:Key="SecondaryDarkText">#9880e5</Color>
 
     <Color x:Key="White">#F9F8F8</Color>
-    <Color x:Key="Black">#151316</Color>
+    <Color x:Key="Black">#131316</Color>
     <Color x:Key="Magenta">#D600AA</Color>
     <Color x:Key="MidnightBlue">#190649</Color>
     <Color x:Key="OffBlack">#1f1f1f</Color>
