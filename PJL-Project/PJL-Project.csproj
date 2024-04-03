@@ -81,6 +81,7 @@
 	  <None Remove="Resources\Fonts\Poppins-SemiBold.ttf" />
 	  <None Remove="Resources\Images\Background.svg" />
 	  <None Remove="Resources\Images\background_buttons.svg" />
+	  <None Remove="Resources\Images\background_entry.svg" />
 	  <None Remove="Resources\Images\background_login.svg" />
 	  <None Remove="Resources\Images\box_arrow_left.svg" />
 	  <None Remove="Resources\Images\corrente_fina.png" />

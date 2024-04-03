@@ -15,17 +15,23 @@
                HeightRequest="150"
                CornerRadius="75"
                Margin="0,-90,0,0"
+               BorderColor="{StaticResource White}"
                BackgroundColor="{StaticResource Quartiary}">
-            <Image Source="logo"/>
+            <Image Source="{Binding Image}" Aspect="AspectFill" WidthRequest="200" HeightRequest="200"/>
         </Frame>
 
+
+        <Frame WidthRequest="35"
+               HeightRequest="35"
+               Padding="8"
+               CornerRadius="18"
+               BackgroundColor="{StaticResource Quintiary}"
+               Margin="120,-50,0,20"
+               BorderColor="Transparent">
+            
         <ImageButton Source="edit_photo.svg"
-                     WidthRequest="35"
-                     HeightRequest="35"
-                     CornerRadius="18"
-                     Padding="4,3,3,3"
-                     BackgroundColor="{StaticResource Quintiary}"
-                     Margin="120,-50,0,20"/>
+                     Command="{Binding EscolherFotoCommand}"/>
+        </Frame>
 
         <Label Text="Pessoa Pessoa"
                FontSize="25"
