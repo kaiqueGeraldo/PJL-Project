@@ -1,4 +1,5 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
 using PJL_Project.Models;
 using System;
 using System.Collections.Generic;
@@ -10,12 +11,16 @@ namespace PJL_Project.ViewModels
 {
     public partial class PerfilViewModel : ObservableObject
     {
-        private List<Usuario> usuarios;
         public PerfilViewModel()
         {
             
         }
 
+        [RelayCommand]
+        private async Task Settings()
+        {
+            await Shell.Current.GoToAsync("ConfigPage");
+        }
 
     }
 }

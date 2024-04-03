@@ -1,12 +1,145 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:PJL_Project.ViewModels"
+             x:DataType="vm:PerfilViewModel"
              x:Class="PJL_Project.Views.PerfilPage"
-             Title="PerfilPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             Title="PerfilPage"
+             Shell.NavBarIsVisible="False">
+    <StackLayout>
+        <Image Source="fundo_perfil.png"/>
+        <Image Source="logo.svg" Margin="0,-230,0,0" WidthRequest="150"/>
+        <ImageButton Source="settings.svg" HorizontalOptions="End" Margin="0,80,20,0" WidthRequest="26" Command="{Binding SettingsCommand}"/>
+
+        <Frame WidthRequest="150"
+               HeightRequest="150"
+               CornerRadius="75"
+               Margin="0,-90,0,0"
+               BackgroundColor="{StaticResource Quartiary}">
+            <Image Source="logo"/>
+        </Frame>
+
+        <ImageButton Source="edit_photo.svg"
+                     WidthRequest="35"
+                     HeightRequest="35"
+                     CornerRadius="18"
+                     Padding="4,3,3,3"
+                     BackgroundColor="{StaticResource Quintiary}"
+                     Margin="120,-50,0,20"/>
+
+        <Label Text="Pessoa Pessoa"
+               FontSize="25"
+               HorizontalTextAlignment="Center"/>
+
+        <Label Text="Descrição - Descrição"
+               FontSize="15"
+               TextColor="{StaticResource Gray400}"
+               HorizontalTextAlignment="Center"/>
+
+        <HorizontalStackLayout Margin="20,15,20,0">
+            <Label Text="Personal Information" Margin="0,0,140,0" FontSize="20"/>
+            <ImageButton Source="edit_perfil.svg" WidthRequest="20"
+                         HeightRequest="20" Margin="0,-5,5,0"/>
+            <Label Text="Edit" FontSize="20"/>
+        </HorizontalStackLayout>
+
+        <Frame WidthRequest="370"
+               HeightRequest="180"
+               BackgroundColor="{StaticResource Secondary}"
+               BorderColor="Transparent">
+
+            <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+
+                <HorizontalStackLayout>
+                    <HorizontalStackLayout VerticalOptions="Start" Spacing="5">
+                        <Image Source="person.svg" WidthRequest="20"/>
+                        <Label Text="Username" VerticalOptions="Center"/>
+                    </HorizontalStackLayout>
+
+                    <Label Text="@exemploUsername"
+                           TextColor="{StaticResource Gray400}"/>
+                </HorizontalStackLayout>
+
+                <BoxView WidthRequest="360" HeightRequest="1" BackgroundColor="{StaticResource White}" Margin="0,8"/>
+
+                <HorizontalStackLayout>
+                    <HorizontalStackLayout VerticalOptions="Start" Spacing="5">
+                        <Image Source="email.svg" WidthRequest="20"/>
+                        <Label Text="Email" VerticalOptions="Center"/>
+                    </HorizontalStackLayout>
+
+                    <Label Text="email@email.com"
+                               TextColor="{StaticResource Gray400}"/>
+                </HorizontalStackLayout>
+
+                <BoxView WidthRequest="360" HeightRequest="1" BackgroundColor="{StaticResource White}" Margin="0,8"/>
+
+                <HorizontalStackLayout>
+                    <HorizontalStackLayout VerticalOptions="Start" Spacing="5">
+                        <Image Source="password.svg" WidthRequest="20"/>
+                        <Label Text="Password" VerticalOptions="Center"/>
+                    </HorizontalStackLayout>
+
+                    <Label Text="**********"
+                               TextColor="{StaticResource Gray400}"/>
+                </HorizontalStackLayout>
+
+                <BoxView WidthRequest="360" HeightRequest="1" BackgroundColor="{StaticResource White}" Margin="0,8"/>
+
+                <HorizontalStackLayout>
+                    <HorizontalStackLayout VerticalOptions="Start" Spacing="5">
+                        <Image Source="credit_card.svg" WidthRequest="20"/>
+                        <Label Text="Registered credit card" VerticalOptions="Center"/>
+                    </HorizontalStackLayout>
+
+                    <Label Text="0000"
+                               TextColor="{StaticResource Gray400}"/>
+                </HorizontalStackLayout>
+
+            </StackLayout>
+        </Frame>
+
+        <Label Text="Utilities" Margin="20,20,0,0" FontSize="20"/>
+
+        <Frame WidthRequest="370"
+               HeightRequest="140"
+               BackgroundColor="{StaticResource Secondary}"
+               BorderColor="Transparent">
+
+            <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+
+                <HorizontalStackLayout>
+                    <HorizontalStackLayout VerticalOptions="Start" Spacing="5">
+                        <Image Source="key.svg" WidthRequest="20"/>
+                        <Label Text="Privacy And Cookie Policy" VerticalOptions="Center"/>
+                    </HorizontalStackLayout>
+
+                    <ImageButton Source="seta.svg" WidthRequest="25" Rotation="180" Margin="0,-12,0,-10"/>
+                </HorizontalStackLayout>
+
+                <BoxView WidthRequest="360" HeightRequest="1" BackgroundColor="{StaticResource White}" Margin="0,8"/>
+
+                <HorizontalStackLayout>
+                    <HorizontalStackLayout VerticalOptions="Start" Spacing="5">
+                        <Image Source="question_circle.svg" WidthRequest="20"/>
+                        <Label Text="Ask Help-Desk" VerticalOptions="Center"/>
+                    </HorizontalStackLayout>
+
+                    <ImageButton Source="seta.svg" WidthRequest="25" Rotation="180" Margin="0,-12,0,-10"/>
+                </HorizontalStackLayout>
+
+                <BoxView WidthRequest="360" HeightRequest="1" BackgroundColor="{StaticResource White}" Margin="0,8"/>
+
+                <HorizontalStackLayout>
+                    <HorizontalStackLayout VerticalOptions="Start" Spacing="5">
+                        <Image Source="box_arrow_left.svg" WidthRequest="20"/>
+                        <Label Text="Log-Out" VerticalOptions="Center"/>
+                    </HorizontalStackLayout>
+
+                    <ImageButton Source="seta.svg" WidthRequest="25" Rotation="180" Margin="0,-12,0,-10"/>
+                </HorizontalStackLayout>
+
+            </StackLayout>
+        </Frame>
+    </StackLayout>
 </ContentPage>
