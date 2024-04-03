@@ -20,23 +20,5 @@ namespace PJL_Project.Models
         public Usuario()
         {
         }
-
-        [ObservableProperty]
-        private string _nome;
-        
-        [ObservableProperty]
-        private string _senha;
-        
-        [ObservableProperty]
-        private string _email;
-
-        [ObservableProperty]
-        private string _cpf;
-
-        [ObservableProperty]
-        private string _cep;
-        
-        [ObservableProperty]
-        private string _imageUrl;
     }
 }
