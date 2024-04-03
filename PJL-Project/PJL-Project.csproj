@@ -65,13 +65,13 @@
 	  <None Remove="Resources\Images\Background.svg" />
 	  <None Remove="Resources\Images\background_buttons.svg" />
 	  <None Remove="Resources\Images\background_login.svg" />
-	  <None Remove="Resources\Images\background_perfil.svg" />
 	  <None Remove="Resources\Images\box_arrow_left.svg" />
 	  <None Remove="Resources\Images\credit_card.svg" />
 	  <None Remove="Resources\Images\edit_perfil.svg" />
 	  <None Remove="Resources\Images\edit_photo.svg" />
 	  <None Remove="Resources\Images\email.svg" />
 	  <None Remove="Resources\Images\eye_on.svg" />
+	  <None Remove="Resources\Images\fundo_perfil.png" />
 	  <None Remove="Resources\Images\key.svg" />
 	  <None Remove="Resources\Images\line.svg" />
 	  <None Remove="Resources\Images\LoginIcons\apple.svg" />
