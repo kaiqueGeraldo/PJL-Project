@@ -2,11 +2,99 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PJL_Project.Views.CategoryPage"
-             Title="CategoryPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             Title="CategoryPage"
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="{StaticResource Primary}">
+    <ScrollView>
+        <StackLayout>
+
+            <Image Source="fundo_tela"/>
+            <Image Source="logo"
+               WidthRequest="180"
+               Margin="0,-125,0,0"/>
+
+            <Label
+                Text="Category"
+                FontSize="30"
+                FontAttributes="Bold"
+                Margin="20,10,0,0"/>
+
+            <Grid RowDefinitions="*,*,*,*,*"
+                  ColumnDefinitions="*,*"
+                  RowSpacing="25"
+                  ColumnSpacing="-20">
+
+                <ImageButton Source="exemplo_colar_homem.png" Grid.Row="0" Grid.Column="0" Margin="0,10,0,-9"/>
+                <Label Text="Men’s necklace" Grid.Row="0" Grid.Column="0" 
+                       Opacity="0.5" 
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="End"/>
+
+                <ImageButton Source="exemplo_anel_homem.png" Grid.Row="1" Grid.Column="0" WidthRequest="163"  HeightRequest="126" />
+                <Label Text="Men's ring" Grid.Row="1" Grid.Column="0" 
+                       Opacity="0.5"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="End"/>
+
+                <ImageButton Source="exemplo_alianca.png" Grid.Row="2" Grid.Column="0"
+                             WidthRequest="163"  HeightRequest="126"/>
+                <Label Text="wedding rings" Grid.Row="2" Grid.Column="0"
+                       Opacity="0.5" 
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="End"/>
+
+                <ImageButton Source="exemplo_anel_mulher.png" Grid.Row="3" Grid.Column="0"
+                             WidthRequest="163"  HeightRequest="126"/>
+                <Label Text="Woman’s rings" Grid.Row="3" Grid.Column="0"
+                       Opacity="0.5"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="End"/>
+
+                <ImageButton Source="exemplo_pulseira_mulher.png" Grid.Row="4" Grid.Column="0"
+                             WidthRequest="163" HeightRequest="126"/>
+                <Label Text="Women's bracelet" Grid.Row="4" Grid.Column="0"
+                       Opacity="0.5"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="End"/>
+
+                <ImageButton Source="exemplo_pulseira_homem.png" Grid.Row="0" Grid.Column="1"
+                             WidthRequest="163"  HeightRequest="126" Margin="0,10,0,-1"/>
+                <Label Text="Men's bracelet" Grid.Row="0" Grid.Column="1"
+                       Opacity="0.5"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="End"/>
+
+                <ImageButton Source="exemplo_tornozeleira_homem.png" Grid.Row="1" Grid.Column="1"
+                             WidthRequest="163"  HeightRequest="126"/>
+                <Label Text="Men's anklet" Grid.Row="1" Grid.Column="1"
+                       Opacity="0.5"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="End"/>
+
+                <ImageButton Source="exemplo_tonozeleira_mulher.png" Grid.Row="2" Grid.Column="1"
+                             WidthRequest="163"  HeightRequest="126" />
+                <Label Text="Women's anklet" Grid.Row="2" Grid.Column="1"
+                       Opacity="0.5"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="End"/>
+
+                <ImageButton Source="exemplo_colar_mulher.png" Grid.Row="3" Grid.Column="1"
+                             WidthRequest="163" HeightRequest="126"/>
+                <Label Text="Women's necklace" Grid.Row="3" Grid.Column="1"
+                       Opacity="0.5"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="End"/>
+
+                <ImageButton Source="berloques.svg" Grid.Row="4" Grid.Column="1" 
+                             WidthRequest="163"  HeightRequest="126"/>
+                <Label Text="Pendants" Grid.Row="4" Grid.Column="1"
+                        Opacity="0.5"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="End"/>
+
+
+            </Grid>
+
+        </StackLayout>
+    </ScrollView>
 </ContentPage>

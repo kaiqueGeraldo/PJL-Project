@@ -2,11 +2,49 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PJL_Project.Views.SeeAllPage"
-             Title="SeeAllPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             Title="SeeAllPage"
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="{StaticResource Primary}">
+    <ScrollView>
+        <StackLayout >
+            <Image Source="fundo_tela"/>
+            <Image Source="logo"
+               WidthRequest="180"
+               Margin="0,-125,0,15"/>
+
+            <Image Source="seta.svg"
+                   Margin="-300,0,0,0"/>
+
+            <Label
+                Text="Popular right now"
+                FontSize="30"
+                FontAttributes="Bold"
+                Margin="70,-40,0,15"/>
+
+            <Grid RowDefinitions="*,*,*"
+                  ColumnDefinitions="*,*"
+                  RowSpacing="10"
+                  ColumnSpacing="-15">
+                
+                <ImageButton Source="colar_espada.svg" Grid.Row="0" Grid.Column="0"
+                             WidthRequest="170"/>
+                
+                <ImageButton Source="colar_cruz_homem.svg" Grid.Row="1" Grid.Column="0"
+                             WidthRequest="170"/>
+                
+                <ImageButton Source="casaco_colar.svg" Grid.Row="2" Grid.Column="0"
+                             WidthRequest="170"/>
+                
+                <ImageButton Source="cinza_barbudo.svg" Grid.Row="0" Grid.Column="1"
+                             WidthRequest="170"/>
+                
+                <ImageButton Source="corrente_fina.png" Grid.Row="1" Grid.Column="1"
+                             WidthRequest="170"/>
+                
+                <ImageButton Source="corrente_de_bicicleta.svg" Grid.Row="2" Grid.Column="1"
+                             WidthRequest="170"/>
+
+            </Grid>
+        </StackLayout>
+    </ScrollView>
 </ContentPage>
