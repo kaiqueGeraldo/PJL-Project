@@ -4,7 +4,7 @@ namespace PJL_Project.Views;
 
 public partial class PerfilPage : ContentPage
 {
-	private PerfilViewModel _viewModel;
+	private readonly PerfilViewModel _viewModel;
 	public PerfilPage()
 	{
 		InitializeComponent();

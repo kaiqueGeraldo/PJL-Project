@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:PJL_Project.Views"
              x:Class="PJL_Project.Views.CategoryPage"
              Title="CategoryPage"
              Shell.NavBarIsVisible="False"
              BackgroundColor="{StaticResource Primary}">
-    <ScrollView>
+
+    <ScrollView Margin="0,-1,0,0">
         <StackLayout>
 
-            <Image Source="fundo_tela"/>
-            <Image Source="logo"
-               WidthRequest="180"
-               Margin="0,-125,0,0"/>
+            <views:NavBar MaximumHeightRequest="120"/>
 
             <Label
                 Text="Category"
@@ -22,7 +21,8 @@
             <Grid RowDefinitions="*,*,*,*,*"
                   ColumnDefinitions="*,*"
                   RowSpacing="25"
-                  ColumnSpacing="-20">
+                  ColumnSpacing="-20"
+                  Margin="0,0,0,20">
 
                 <ImageButton Source="exemplo_colar_homem.png" Grid.Row="0" Grid.Column="0" Margin="0,10,0,-9"/>
                 <Label Text="Men’s necklace" Grid.Row="0" Grid.Column="0" 
