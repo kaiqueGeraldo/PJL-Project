@@ -33,25 +33,37 @@
                TextColor="#A4A4A4"
                FontSize="18"
                Margin="45,0,0,0"/>
-            <Frame WidthRequest="314"
-               HeightRequest="55"
-               Margin="0,0,0,15">
+            <Image Source="background_entry.svg" Margin="0,0,0,-55"/>
+            <Image Source="background_entry.svg" Margin="0,0,0,-55"/>
+            <Border WidthRequest="314"
+                    HeightRequest="55"
+                    Margin="0,0,0,15"
+                    Padding="15,0"
+                    StrokeShape="RoundRectangle 8"
+                    StrokeThickness="0">
                 <HorizontalStackLayout Spacing="20">
                     <Image Source="person_entry.svg"/>
                     <Entry Text="{Binding Email}"
+                           TextColor="{StaticResource White}"
                            Placeholder="youremail@gmail.com"
                            WidthRequest="314"
-                           HeightRequest="75"/>
+                           HeightRequest="75"
+                           MaxLength="60"/>
                 </HorizontalStackLayout>
-            </Frame>
+            </Border>
 
             <Label Text="Password"
                TextColor="#A4A4A4"
                FontSize="18"
                Margin="45,0,0,0"/>
-            <Frame WidthRequest="314"
-               HeightRequest="55"
-               Margin="0,0,0,25">
+            <Image Source="background_entry.svg" Margin="0,0,0,-55"/>
+            <Image Source="background_entry.svg" Margin="0,0,0,-55"/>
+            <Border WidthRequest="314"
+                    HeightRequest="55"
+                    Margin="0,0,0,25"
+                    Padding="15,0"
+                    StrokeShape="RoundRectangle 8"
+                    StrokeThickness="0">
                 <HorizontalStackLayout Spacing="20">
                     <Image Source="key.svg"/>
                     <Entry Text="{Binding Senha}"
@@ -59,11 +71,12 @@
                            x:Name="SenhaEntry"
                            WidthRequest="185"
                            HeightRequest="75"
-                           IsPassword="True"/>
-                    <ImageButton Source="eye_off.svg" x:Name="EyeOff" IsVisible="True" HorizontalOptions="EndAndExpand" Clicked="ShowPassword_Clicked"/>
-                    <ImageButton Source="eye_on.svg" x:Name="EyeOn" IsVisible="False" Margin="0,0,0,0" Clicked="HidePassword_Clicked"/>
+                           IsPassword="True"
+                           TextColor="{StaticResource White}"/>
+                    <ImageButton Source="eye_off.svg" x:Name="EyeOff" IsVisible="True" HorizontalOptions="EndAndExpand" Clicked="ShowPassword_Clicked" WidthRequest="25"/>
+                    <ImageButton Source="eye_on.svg" x:Name="EyeOn" IsVisible="False" Margin="0,0,0,0" Clicked="HidePassword_Clicked" WidthRequest="25"/>
                 </HorizontalStackLayout>
-            </Frame>
+            </Border>
 
             <Button Text="Login"
                 TextColor="white"
@@ -109,5 +122,5 @@
            HeightRequest="700"
            Margin="0,0,0,0"/>
     </StackLayout>
-    
+
 </ContentPage>
