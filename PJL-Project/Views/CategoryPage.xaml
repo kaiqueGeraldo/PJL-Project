@@ -7,7 +7,7 @@
              Shell.NavBarIsVisible="False"
              BackgroundColor="{StaticResource Primary}">
 
-    <ScrollView Margin="0,-1,0,0">
+    <ScrollView Margin="0,-1,0,0" VerticalScrollBarVisibility="Never">
         <StackLayout>
 
             <views:NavBar MaximumHeightRequest="120"/>

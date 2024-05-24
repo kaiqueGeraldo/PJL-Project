@@ -79,25 +79,33 @@
 	  <None Remove="Resources\Fonts\Poppins-Medium.ttf" />
 	  <None Remove="Resources\Fonts\Poppins-Regular.ttf" />
 	  <None Remove="Resources\Fonts\Poppins-SemiBold.ttf" />
+	  <None Remove="Resources\Images\anklet.svg" />
+	  <None Remove="Resources\Images\apple.svg" />
 	  <None Remove="Resources\Images\Background.svg" />
 	  <None Remove="Resources\Images\background_buttons.svg" />
 	  <None Remove="Resources\Images\background_entry.svg" />
 	  <None Remove="Resources\Images\background_login.svg" />
 	  <None Remove="Resources\Images\box_arrow_left.svg" />
+	  <None Remove="Resources\Images\bracelet.svg" />
 	  <None Remove="Resources\Images\corrente_fina.png" />
 	  <None Remove="Resources\Images\credit_card.svg" />
 	  <None Remove="Resources\Images\edit_perfil.svg" />
 	  <None Remove="Resources\Images\edit_photo.svg" />
 	  <None Remove="Resources\Images\email.svg" />
 	  <None Remove="Resources\Images\exemplo_colar_mulher.png" />
+	  <None Remove="Resources\Images\eye_off.svg" />
 	  <None Remove="Resources\Images\eye_on.svg" />
+	  <None Remove="Resources\Images\facebook.svg" />
 	  <None Remove="Resources\Images\fundo_perfil.png" />
 	  <None Remove="Resources\Images\key.svg" />
 	  <None Remove="Resources\Images\line.svg" />
+	  <None Remove="Resources\Images\locket.svg" />
 	  <None Remove="Resources\Images\logo.svg" />
+	  <None Remove="Resources\Images\necklace.svg" />
 	  <None Remove="Resources\Images\password.svg" />
 	  <None Remove="Resources\Images\person_entry.svg" />
 	  <None Remove="Resources\Images\settings.svg" />
+	  <None Remove="Resources\Images\wedding_ring.svg" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -108,12 +116,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Resource Include="Resources\Images\apple.svg" />
 	  <Resource Include="Resources\Images\chave.svg" />
-	  <Resource Include="Resources\Images\facebook.svg" />
 	  <Resource Include="Resources\Images\google_icon.svg" />
 	  <Resource Include="Resources\Images\menos.svg" />
-	  <Resource Include="Resources\Images\eye_off.svg" />
 	  <Resource Include="Resources\Images\plus.svg" />
 	  <Resource Include="Resources\Images\procurar.svg" />
 	  <Resource Include="Resources\Images\question_circle.svg" />
@@ -148,6 +153,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\PerfilPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\ProdutoDetailPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\SeeAllPage.xaml">

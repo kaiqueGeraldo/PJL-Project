@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace PJL_Project.Models
+﻿namespace PJL_Project.Models
 {
     public class Categoria
     {
         public int CategoriaId { get; set; }
         public string Descricao { get; set; }
+        public string Imagem { get; set; }
     }
 }

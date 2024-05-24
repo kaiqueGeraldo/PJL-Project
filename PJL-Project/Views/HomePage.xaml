@@ -2,17 +2,260 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:views="clr-namespace:PJL_Project.Views"
+             xmlns:vm="clr-namespace:PJL_Project.ViewModels"
+             xmlns:models="clr-namespace:PJL_Project.Models"
+             x:DataType="vm:HomeViewModel"
              x:Class="PJL_Project.Views.HomePage"
              Shell.NavBarIsVisible="False"
              Title="HomePage">
 
-    <ContentPage.Content>
-        <StackLayout Margin="0,-1,0,0">
+    <ContentPage.Resources>
+        <Style x:Key="IndicatorBorderStyle" TargetType="Border">
+            <Setter Property="VisualStateManager.VisualStateGroups">
+                <VisualStateGroupList>
+                    <VisualStateGroup x:Name="CommomStates">
+                        <VisualState x:Name="Normal">
+                            <VisualState.Setters>
+                                <Setter Property="BackgroundColor"
+                                        Value="#fff"/>
+                            </VisualState.Setters>
+                        </VisualState>
+                        <VisualState x:Name="Selected">
+                            <VisualState.Setters>
+                                <Setter Property="BackgroundColor"
+                                Value="{StaticResource Primary}"/>
+                                <Setter Property="WidthRequest"
+                                Value="15"/>
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateGroupList>
+            </Setter>
+        </Style>
+    </ContentPage.Resources>
+
+    <ScrollView Margin="0,-1,0,0" VerticalScrollBarVisibility="Never">
+
+        <StackLayout>
 
             <views:NavBar MaximumHeightRequest="120"/>
 
-            <Label Text="Conteúdo da página Home"/>
-        </StackLayout>
-    </ContentPage.Content>
+            <StackLayout Margin="0,30">
+                <Image Source="background_entry.svg" Margin="0,0,0,-55"/>
+                <Image Source="background_entry.svg" Margin="0,0,0,-55"/>
 
+                <Border WidthRequest="314"
+                    HeightRequest="55"
+                    Margin="0,0,0,15"
+                    Padding="15,0"
+                    StrokeShape="RoundRectangle 8"
+                    StrokeThickness="0">
+                    <HorizontalStackLayout Spacing="15">
+                        <ImageButton Source="procurar.svg" WidthRequest="28"/>
+                        <Entry
+                           TextColor="{StaticResource White}"
+                           Placeholder="What do you wish for?"
+                           WidthRequest="314"
+                           HeightRequest="75"
+                           MaxLength="60"/>
+                    </HorizontalStackLayout>
+                </Border>
+            </StackLayout>
+
+            <CarouselView ItemsSource="{Binding Carrousels}"
+                      IndicatorView="indicatorView"
+                      Margin="0,-10,0,0">
+
+                <CarouselView.ItemTemplate>
+                    <DataTemplate x:DataType="models:Carrousel">
+                        <StackLayout HorizontalOptions="Center">
+                            <Image Source="{Binding Imagem}"/>
+                        </StackLayout>
+                    </DataTemplate>
+                </CarouselView.ItemTemplate>
+            </CarouselView>
+
+            <IndicatorView x:Name="indicatorView"
+                       IndicatorColor="#fff"
+                       SelectedIndicatorColor="{StaticResource verde}"
+                       HorizontalOptions="Center"
+                       Margin="0,-20,0,0">
+                <IndicatorView.IndicatorTemplate>
+                    <DataTemplate>
+                        <Border HeightRequest="10"
+                            WidthRequest="10"
+                            StrokeShape="RoundRectangle 50"
+                            Style="{StaticResource IndicatorBorderStyle}"/>
+                    </DataTemplate>
+                </IndicatorView.IndicatorTemplate>
+            </IndicatorView>
+
+            <StackLayout Orientation="Horizontal"
+                     Margin="20,30"
+                     Spacing="10">
+
+                <StackLayout Spacing="5">
+                    <Button WidthRequest="62"
+                            HeightRequest="62"
+                            CornerRadius="40"
+                            BackgroundColor="{StaticResource Quintiary}"
+                            ImageSource="necklace.png"
+                            Command="{Binding SeeAllPageCommand}"/>
+                    <Label Text="Necklace"
+                       HorizontalTextAlignment="Center"/>
+                </StackLayout>
+
+                <StackLayout Spacing="5">
+                    <Button WidthRequest="62"
+                            HeightRequest="62"
+                            CornerRadius="40"
+                            BackgroundColor="{StaticResource Quintiary}"
+                            ImageSource="wedding_ring"
+                            Command="{Binding SeeAllPageCommand}"/>
+                    <Label Text="Wedding Ring"
+                           HorizontalTextAlignment="Center"/>
+                </StackLayout>
+
+                <StackLayout Spacing="5">
+                    <Button WidthRequest="62"
+                            HeightRequest="62"
+                            CornerRadius="40"
+                            BackgroundColor="{StaticResource Quintiary}"
+                            ImageSource="bracelet"
+                            Command="{Binding SeeAllPageCommand}"/>
+                    <Label Text="Bracelet"
+                       HorizontalTextAlignment="Center"/>
+                </StackLayout>
+
+                <StackLayout Spacing="5">
+                    <Button WidthRequest="62"
+                            HeightRequest="62"
+                            CornerRadius="40"
+                            BackgroundColor="{StaticResource Quintiary}"
+                            ImageSource="anklet"
+                            Command="{Binding SeeAllPageCommand}"/>
+                    <Label Text="Anklet"
+                           HorizontalTextAlignment="Center"/>
+                </StackLayout>
+
+                <StackLayout Spacing="5">
+                    <Button WidthRequest="62"
+                            HeightRequest="62"
+                            CornerRadius="40"
+                            BackgroundColor="{StaticResource Quintiary}"
+                            ImageSource="locket"
+                            Command="{Binding SeeAllPageCommand}"/>
+                    <Label Text="Locket"
+                       HorizontalTextAlignment="Center"/>
+                </StackLayout>
+
+            </StackLayout>
+
+            <StackLayout>
+                <StackLayout Orientation="Horizontal" Margin="20,0">
+                    <Label Text="Popular Right Now"
+                           HorizontalOptions="StartAndExpand"
+                           VerticalTextAlignment="Center"
+                           FontSize="20"/>
+                    <Button Text="See All"
+                            FontSize="15"
+                            Command="{Binding SeeAllPageCommand}"/>
+                </StackLayout>
+
+                <ScrollView Orientation="Horizontal" 
+                            HorizontalScrollBarVisibility="Never"
+                            Margin="10,0">
+                    <CollectionView ItemsSource="{Binding Produtos}">
+                        <CollectionView.ItemsLayout>
+                            <LinearItemsLayout Orientation="Horizontal" />
+                        </CollectionView.ItemsLayout>
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate x:DataType="models:Produto">
+                                <StackLayout>
+                                    <ImageButton Source="{Binding Imagem}"/>
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding Source={RelativeSource
+                                            AncestorType={x:Type vm:HomeViewModel}},
+                                            Path=ProdutoClicadoCommand}" CommandParameter="{Binding .}"/>
+                                    </StackLayout.GestureRecognizers>
+                                </StackLayout>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </ScrollView>
+
+            </StackLayout>
+
+            <StackLayout Margin="0,20,0,0">
+                <StackLayout Orientation="Horizontal" Margin="20,0">
+                    <Label Text="Popular Right Now"
+                           HorizontalOptions="StartAndExpand"
+                           VerticalTextAlignment="Center"
+                           FontSize="20"/>
+                    <Button Text="See All"
+                            FontSize="15"
+                            Command="{Binding SeeAllPageCommand}"/>
+                </StackLayout>
+
+                <ScrollView Orientation="Horizontal" 
+                            HorizontalScrollBarVisibility="Never"
+                            Margin="10,0">
+                    <CollectionView ItemsSource="{Binding Produtos}">
+                        <CollectionView.ItemsLayout>
+                            <LinearItemsLayout Orientation="Horizontal" />
+                        </CollectionView.ItemsLayout>
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate x:DataType="models:Produto">
+                                <StackLayout>
+                                    <ImageButton Source="{Binding Imagem}"/>
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding Source={RelativeSource
+                                            AncestorType={x:Type vm:HomeViewModel}},
+                                            Path=ProdutoClicadoCommand}" CommandParameter="{Binding .}"/>
+                                    </StackLayout.GestureRecognizers>
+                                </StackLayout>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </ScrollView>
+
+            </StackLayout>
+
+            <StackLayout Margin="0,20,0,0">
+                <StackLayout Orientation="Horizontal" Margin="20,0">
+                    <Label Text="Popular Categories"
+                           HorizontalOptions="StartAndExpand"
+                           VerticalTextAlignment="Center"
+                           FontSize="20"/>
+                    <Button Text="See All"
+                            FontSize="15"
+                            Command="{Binding SeeAllPageCommand}"/>
+                </StackLayout>
+
+                <ScrollView Orientation="Horizontal" 
+                            HorizontalScrollBarVisibility="Never"
+                            Margin="10,0">
+                    <CollectionView ItemsSource="{Binding Categorias}">
+                        <CollectionView.ItemsLayout>
+                            <LinearItemsLayout Orientation="Horizontal" />
+                        </CollectionView.ItemsLayout>
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate x:DataType="models:Categoria">
+                                <StackLayout>
+                                    <ImageButton Source="{Binding Imagem}" Margin="0,0,10,0"/>
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding Source={RelativeSource
+                                            AncestorType={x:Type vm:HomeViewModel}},
+                                            Path=ProdutoClicadoCommand}" CommandParameter="{Binding .}"/>
+                                    </StackLayout.GestureRecognizers>
+                                </StackLayout>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </ScrollView>
+
+            </StackLayout>
+        </StackLayout>
+
+    </ScrollView>
 </ContentPage>

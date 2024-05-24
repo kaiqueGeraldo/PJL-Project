@@ -7,110 +7,105 @@
              Title="PerfilPage"
              Shell.NavBarIsVisible="False">
 
-    <ScrollView>
+    <ScrollView VerticalScrollBarVisibility="Never">
         <StackLayout>
             <Image Source="fundo_perfil.png"/>
             <Image Source="logo.svg" Margin="0,-241,0,0" WidthRequest="180"/>
             <ImageButton Source="settings.svg" HorizontalOptions="End" Margin="0,73,20,0" WidthRequest="26" Command="{Binding SettingsCommand}"/>
 
             <Frame WidthRequest="150"
-               HeightRequest="150"
-               CornerRadius="75"
-               Margin="0,-96,0,0"
-               BorderColor="{StaticResource White}"
-               BackgroundColor="{StaticResource Quartiary}">
+                   HeightRequest="150"
+                   CornerRadius="75"
+                   Margin="0,-96,0,0"
+                   BorderColor="{StaticResource White}"
+                   BackgroundColor="{StaticResource Primary}">
                 <Image Source="{Binding Image}" Aspect="AspectFill" WidthRequest="200" HeightRequest="200"/>
             </Frame>
 
-
-            <Frame WidthRequest="35"
-               HeightRequest="35"
-               Padding="8"
-               CornerRadius="18"
-               BackgroundColor="{StaticResource Quintiary}"
-               Margin="120,-50,0,20"
-               BorderColor="Transparent">
-
-                <ImageButton Source="edit_photo.svg"
-                     Command="{Binding EscolherFotoCommand}"/>
-            </Frame>
+            <Button WidthRequest="35"
+                    HeightRequest="35"
+                    CornerRadius="20"
+                    BackgroundColor="{StaticResource Quintiary}"
+                    ImageSource="edit_photo"
+                    Command="{Binding EscolherFotoCommand}"
+                    Margin="120,-50,0,20"/>
 
             <Label Text="Pessoa Pessoa"
-               FontSize="25"
-               HorizontalTextAlignment="Center"/>
+                   FontSize="25"
+                   HorizontalTextAlignment="Center"/>
 
             <Label Text="Descrição - Descrição"
-               FontSize="15"
-               TextColor="{StaticResource Gray400}"
-               HorizontalTextAlignment="Center"/>
+                   FontSize="15"
+                   TextColor="{StaticResource Gray400}"
+                   HorizontalTextAlignment="Center"/>
 
             <HorizontalStackLayout Margin="20,15,20,10">
                 <Label Text="Personal Information" Margin="0,0,140,0" FontSize="20"/>
                 <ImageButton Source="edit_perfil.svg" WidthRequest="20"
-                         HeightRequest="20" Margin="0,-5,5,0"/>
+                             HeightRequest="20" Margin="0,-5,5,0"/>
                 <Label Text="Edit" FontSize="20"/>
             </HorizontalStackLayout>
 
             <Border WidthRequest="370"
-                HeightRequest="180"
-                Padding="20,10"
-                StrokeShape="RoundRectangle 10"
-                StrokeThickness="0"
-                BackgroundColor="{StaticResource Primary}">
+                    HeightRequest="180"
+                    Padding="20,10"
+                    StrokeShape="RoundRectangle 10"
+                    StrokeThickness="0"
+                    BackgroundColor="{StaticResource Primary}">
 
                 <Border.Shadow>
                     <Shadow Brush="{StaticResource Black}"
-                        Offset="15,15"
-                        Radius="30"/>
+                            Offset="15,15"
+                            Radius="30"/>
                 </Border.Shadow>
 
                 <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
 
-                    <HorizontalStackLayout>
-                        <HorizontalStackLayout VerticalOptions="Start" Spacing="5" WidthRequest="183">
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout Orientation="Horizontal" Spacing="5" HorizontalOptions="StartAndExpand">
                             <Image Source="person.svg" WidthRequest="20"/>
                             <Label Text="Username" VerticalOptions="Center"/>
-                        </HorizontalStackLayout>
+                        </StackLayout>
 
                         <Label Text="@exemploUsername"
                                TextColor="{StaticResource Gray400}"/>
-                    </HorizontalStackLayout>
+                    </StackLayout>
 
                     <BoxView WidthRequest="360" HeightRequest="1" BackgroundColor="{StaticResource White}" Margin="0,8"/>
 
-                    <HorizontalStackLayout>
-                        <HorizontalStackLayout VerticalOptions="Start" Spacing="5" WidthRequest="200">
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout Orientation="Horizontal" Spacing="5" HorizontalOptions="StartAndExpand">
                             <Image Source="email.svg" WidthRequest="20"/>
                             <Label Text="Email" VerticalOptions="Center"/>
-                        </HorizontalStackLayout>
+                        </StackLayout>
 
                         <Label Text="email@email.com"
                                TextColor="{StaticResource Gray400}"/>
-                    </HorizontalStackLayout>
+                    </StackLayout>
 
                     <BoxView WidthRequest="360" HeightRequest="1" BackgroundColor="{StaticResource White}" Margin="0,8"/>
 
-                    <HorizontalStackLayout>
-                        <HorizontalStackLayout VerticalOptions="Start" Spacing="5" WidthRequest="260">
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout Orientation="Horizontal" Spacing="5" HorizontalOptions="StartAndExpand">
                             <Image Source="password.svg" WidthRequest="20"/>
                             <Label Text="Password" VerticalOptions="Center"/>
-                        </HorizontalStackLayout>
+                        </StackLayout>
 
                         <Label Text="**********"
                                TextColor="{StaticResource Gray400}"/>
-                    </HorizontalStackLayout>
+                    </StackLayout>
 
                     <BoxView WidthRequest="360" HeightRequest="1" BackgroundColor="{StaticResource White}" Margin="0,8"/>
 
-                    <HorizontalStackLayout>
-                        <HorizontalStackLayout VerticalOptions="Start" Spacing="5" WidthRequest="290">
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout Orientation="Horizontal" Spacing="5" HorizontalOptions="StartAndExpand">
                             <Image Source="credit_card.svg" WidthRequest="20"/>
                             <Label Text="Registered credit card" VerticalOptions="Center"/>
-                        </HorizontalStackLayout>
+                        </StackLayout>
 
                         <Label Text="0000"
                                TextColor="{StaticResource Gray400}"/>
-                    </HorizontalStackLayout>
+                    </StackLayout>
 
                 </StackLayout>
             </Border>
@@ -133,36 +128,36 @@
 
                 <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
 
-                    <HorizontalStackLayout HorizontalOptions="StartAndExpand">
-                        <HorizontalStackLayout VerticalOptions="Start" Spacing="5" WidthRequest="305">
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout Orientation="Horizontal" Spacing="5" HorizontalOptions="StartAndExpand">
                             <Image Source="key.svg" WidthRequest="20"/>
                             <Label Text="Privacy And Cookie Policy" VerticalOptions="Center"/>
-                        </HorizontalStackLayout>
+                        </StackLayout>
 
                         <ImageButton Source="seta.svg" WidthRequest="25" Rotation="180" Margin="0,-12,0,-10"/>
-                    </HorizontalStackLayout>
+                    </StackLayout>
 
                     <BoxView WidthRequest="360" HeightRequest="1" BackgroundColor="{StaticResource White}" Margin="0,8"/>
 
-                    <HorizontalStackLayout>
-                        <HorizontalStackLayout VerticalOptions="Start" Spacing="5" WidthRequest="305">
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout Orientation="Horizontal" Spacing="5" HorizontalOptions="StartAndExpand">
                             <Image Source="question_circle.svg" WidthRequest="20"/>
                             <Label Text="Ask Help-Desk" VerticalOptions="Center"/>
-                        </HorizontalStackLayout>
+                        </StackLayout>
 
                         <ImageButton Source="seta.svg" WidthRequest="25" Rotation="180" Margin="0,-12,0,-10"/>
-                    </HorizontalStackLayout>
+                    </StackLayout>
 
                     <BoxView WidthRequest="360" HeightRequest="1" BackgroundColor="{StaticResource White}" Margin="0,8"/>
 
-                    <HorizontalStackLayout>
-                        <HorizontalStackLayout VerticalOptions="Start" Spacing="5" WidthRequest="305">
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout Orientation="Horizontal" Spacing="5" HorizontalOptions="StartAndExpand">
                             <Image Source="box_arrow_left.svg" WidthRequest="20"/>
                             <Label Text="Log-Out" VerticalOptions="Center"/>
-                        </HorizontalStackLayout>
+                        </StackLayout>
 
                         <ImageButton Source="seta.svg" WidthRequest="25" Rotation="180" Margin="0,-12,0,-10"/>
-                    </HorizontalStackLayout>
+                    </StackLayout>
 
                 </StackLayout>
             </Border>

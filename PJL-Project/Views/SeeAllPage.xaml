@@ -1,46 +1,52 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:PJL_Project.Views"
+             xmlns:vm="clr-namespace:PJL_Project.ViewModels"
+             x:DataType="vm:SeeAllViewModel"
              x:Class="PJL_Project.Views.SeeAllPage"
              Title="SeeAllPage"
              Shell.NavBarIsVisible="False"
              BackgroundColor="{StaticResource Primary}">
-    <ScrollView>
+
+    <ScrollView VerticalScrollBarVisibility="Never">
         <StackLayout >
-            <Image Source="fundo_tela"/>
-            <Image Source="logo"
-               WidthRequest="180"
-               Margin="0,-125,0,15"/>
 
-            <Image Source="seta.svg"
-                   Margin="-300,0,0,0"/>
+            <views:NavBar MaximumHeightRequest="120"/>
 
-            <Label
-                Text="Popular right now"
-                FontSize="30"
-                FontAttributes="Bold"
-                Margin="70,-40,0,15"/>
+            <StackLayout Orientation="Horizontal"
+                         HorizontalOptions="Start"
+                         Margin="15,20"
+                         Spacing="10">
+                <ImageButton Source="seta.svg"
+                             Command="{Binding BackPageCommand}"/>
+
+                <Label Text="Popular right now"
+                       FontSize="30"
+                       FontAttributes="Bold"
+                       VerticalTextAlignment="End"/>
+            </StackLayout>
 
             <Grid RowDefinitions="*,*,*"
                   ColumnDefinitions="*,*"
                   RowSpacing="10"
                   ColumnSpacing="-15">
-                
+
                 <ImageButton Source="colar_espada.svg" Grid.Row="0" Grid.Column="0"
                              WidthRequest="170"/>
-                
+
                 <ImageButton Source="colar_cruz_homem.svg" Grid.Row="1" Grid.Column="0"
                              WidthRequest="170"/>
-                
+
                 <ImageButton Source="casaco_colar.svg" Grid.Row="2" Grid.Column="0"
                              WidthRequest="170"/>
-                
+
                 <ImageButton Source="cinza_barbudo.svg" Grid.Row="0" Grid.Column="1"
                              WidthRequest="170"/>
-                
+
                 <ImageButton Source="corrente_fina.png" Grid.Row="1" Grid.Column="1"
                              WidthRequest="170"/>
-                
+
                 <ImageButton Source="corrente_de_bicicleta.svg" Grid.Row="2" Grid.Column="1"
                              WidthRequest="170"/>
 
