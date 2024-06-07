@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:views="clr-namespace:PJL_Project.Views"
              xmlns:vm="clr-namespace:PJL_Project.ViewModels"
-             xmlns:models="clr-namespace:PJL_Project.Models"
+             xmlns:models="clr-namespace:PJL_Project.Models;assembly=PJL.Models"
              x:DataType="vm:HomeViewModel"
              x:Class="PJL_Project.Views.HomePage"
              Shell.NavBarIsVisible="False"
@@ -25,7 +25,7 @@
                                 <Setter Property="BackgroundColor"
                                 Value="{StaticResource Primary}"/>
                                 <Setter Property="WidthRequest"
-                                Value="15"/>
+                                Value="10"/>
                             </VisualState.Setters>
                         </VisualState>
                     </VisualStateGroup>
@@ -82,10 +82,11 @@
                        Margin="0,-20,0,0">
                 <IndicatorView.IndicatorTemplate>
                     <DataTemplate>
-                        <Border HeightRequest="10"
-                            WidthRequest="10"
-                            StrokeShape="RoundRectangle 50"
-                            Style="{StaticResource IndicatorBorderStyle}"/>
+                        <Border HeightRequest="7"
+                                WidthRequest="8"
+                                StrokeThickness="0"
+                                StrokeShape="RoundRectangle 50"
+                                Style="{StaticResource IndicatorBorderStyle}"/>
                     </DataTemplate>
                 </IndicatorView.IndicatorTemplate>
             </IndicatorView>

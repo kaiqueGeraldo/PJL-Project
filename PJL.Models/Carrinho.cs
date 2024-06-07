@@ -2,12 +2,12 @@
 {
     public class Carrinho
     {
-        public int NumeroPedido { get; set; }
+        public int Id { get; set; }
         public DateTime DataPedido { get; set; }
         public DateTime DataRecebimento { get; set; }
-        public decimal SubTotal { get; set; }
-        public decimal ValorTotal { get; set; }
-        public decimal Frete { get; set; }
+        public double SubTotal { get; set; }
+        public double ValorTotal { get; set; }
+        public double Frete { get; set; }
 
         public int UsuarioId { get; set; }
         public Usuario Usuario { get; set; }

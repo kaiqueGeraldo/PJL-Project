@@ -7,6 +7,7 @@ namespace PJL_Project
         public AppShell()
         {
             InitializeComponent();
+            Routing.RegisterRoute("InfoPage", typeof(InfoPage));
             Routing.RegisterRoute("LoginPage", typeof(LoginPage));
             Routing.RegisterRoute("SingUpPage", typeof(SingUpPage));
             Routing.RegisterRoute("ConfigPage", typeof(ConfigPage));

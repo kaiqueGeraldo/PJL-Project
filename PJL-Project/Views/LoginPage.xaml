@@ -8,7 +8,8 @@
              BackgroundColor="#131316"
          Shell.NavBarHasShadow="False">
     <ContentPage.ToolbarItems>
-        <ToolbarItem IconImageSource="question_circle.svg"/>
+        <ToolbarItem IconImageSource="question_circle.svg"
+                     Command="{Binding InfoCommand}"/>
     </ContentPage.ToolbarItems>
 
     <StackLayout HorizontalOptions="Center">

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:models="clr-namespace:PJL_Project.Models"
+             xmlns:model="clr-namespace:PJL_Project.Models;assembly=PJL.Models"
              xmlns:vm="clr-namespace:PJL_Project.ViewModels"
              x:DataType="vm:ProdutoDetailViewModel"
              x:Class="PJL_Project.Views.ProdutoDetailPage"

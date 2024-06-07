@@ -25,5 +25,11 @@ namespace PJL_Project.ViewModels
         {
             await Shell.Current.GoToAsync("LoginPage");
         }
+        
+        [RelayCommand]
+        private async Task Info()
+        {
+            await Shell.Current.GoToAsync("InfoPage");
+        }
     }
 }
