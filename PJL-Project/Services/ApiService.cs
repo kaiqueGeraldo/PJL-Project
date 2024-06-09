@@ -45,7 +45,7 @@ namespace PJL_Project.Services
             }
         }
 
-        public async Task<bool> PostPerfil(Usuario usuario)
+        public async Task<bool> PostUsuario(Usuario usuario)
         {
             try
             {
@@ -56,6 +56,23 @@ namespace PJL_Project.Services
             catch (Exception)
             {
 
+                throw;
+            }
+        }
+
+        public async Task<Usuario> AutenticarUsuario(string email, string senha)
+        {
+            try
+            {
+                var response = await _httpClient.PostAsJsonAsync("usuarios/autenticar", new { Email = email, Senha = senha });
+                if (response.IsSuccessStatusCode)
+                {
+                    return await response.Content.ReadFromJsonAsync<Usuario>();
+                }
+                return null;
+            }
+            catch (Exception)
+            {
                 throw;
             }
         }

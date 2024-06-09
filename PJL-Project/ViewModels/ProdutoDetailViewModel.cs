@@ -10,7 +10,7 @@ namespace PJL_Project.ViewModels
         private readonly ApiService _apiService;
         public ProdutoDetailViewModel()
         {
-             _apiService = new ApiService();
+            _apiService = new ApiService();
         }
 
         public int Id { get; set; }

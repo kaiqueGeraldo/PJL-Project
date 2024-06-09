@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace PJL_Project.Services
+﻿namespace PJL_Project.Services
 {
     internal class BaseUrlAddress
     {

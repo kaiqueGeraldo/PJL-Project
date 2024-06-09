@@ -9,7 +9,7 @@ namespace PJL_Project
             InitializeComponent();
             Routing.RegisterRoute("InfoPage", typeof(InfoPage));
             Routing.RegisterRoute("LoginPage", typeof(LoginPage));
-            Routing.RegisterRoute("SingUpPage", typeof(SingUpPage));
+            Routing.RegisterRoute("SignUpPage", typeof(SignUpPage));
             Routing.RegisterRoute("ConfigPage", typeof(ConfigPage));
             Routing.RegisterRoute("SeeAllPage", typeof(SeeAllPage));
             Routing.RegisterRoute("NoItemsPage", typeof(NoItemsPage));

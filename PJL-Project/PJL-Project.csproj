@@ -174,7 +174,7 @@
 	  <MauiXaml Update="Views\SeeAllPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\SingUpPage.xaml">
+	  <MauiXaml Update="Views\SignUpPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\TypeLoginPage.xaml">

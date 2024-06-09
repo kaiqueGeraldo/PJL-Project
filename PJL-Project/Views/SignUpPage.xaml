@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:models="clr-namespace:PJL_Project.Models"
              xmlns:vm="clr-namespace:PJL_Project.ViewModels"
-             x:DataType="vm:SingUpViewModel"
-             x:Class="PJL_Project.Views.SingUpPage"
+             x:DataType="vm:SignUpViewModel"
+             x:Class="PJL_Project.Views.SignUpPage"
              BackgroundColor="#131316"
              Shell.NavBarHasShadow="False">
     <ContentPage.ToolbarItems>
@@ -52,7 +51,7 @@
                 </HorizontalStackLayout>
             </Border>
 
-            <Label Text="Email Adress"
+            <Label Text="Email Address"
                    TextColor="#A4A4A4"
                    FontSize="18"
                    Margin="45,0,0,0"/>
@@ -100,7 +99,7 @@
                 </HorizontalStackLayout>
             </Border>
 
-            <Button Text="Login"
+            <Button Text="Sign Up"
                     TextColor="white"
                     FontSize="18"
                     FontAttributes="Bold"
@@ -121,10 +120,10 @@
                 <Image Source="line.svg"/>
 
                 <Label Text="Or continue with"
-                   TextColor="#B6B6B6"/>
+                       TextColor="#B6B6B6"/>
 
                 <Image Source="line.svg"
-                   Rotation="180"/>
+                       Rotation="180"/>
             </HorizontalStackLayout>
 
             <Grid HorizontalOptions="Center" ColumnDefinitions="*,*,*" ColumnSpacing="20">
@@ -144,5 +143,4 @@
                HeightRequest="700"
                Margin="0,0,0,0"/>
     </StackLayout>
-
 </ContentPage>

@@ -2,15 +2,15 @@ using PJL_Project.ViewModels;
 
 namespace PJL_Project.Views;
 
-public partial class SingUpPage : ContentPage
+public partial class SignUpPage : ContentPage
 {
-	private SingUpViewModel _viewModel;
-	public SingUpPage()
+    private readonly SignUpViewModel _viewModel;
+	public SignUpPage()
 	{
 		InitializeComponent();
-		_viewModel = new SingUpViewModel();
-		BindingContext = _viewModel;
-	}
+        _viewModel = new SignUpViewModel();
+        BindingContext = _viewModel;
+    }
 
     private void ShowPassword_Clicked(object sender, EventArgs e)
     {
