@@ -8,8 +8,7 @@ public partial class ProdutoDetailPage : ContentPage
 	public ProdutoDetailPage()
 	{
 		InitializeComponent();
-		_viewModel = new ProdutoDetailViewModel();
-		BindingContext = _viewModel;
+		BindingContext = _viewModel = new ProdutoDetailViewModel();
 	}
 
 	protected override async void OnAppearing()

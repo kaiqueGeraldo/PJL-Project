@@ -5,11 +5,11 @@ namespace PJL_Project.Views;
 public partial class SignUpPage : ContentPage
 {
     private readonly SignUpViewModel _viewModel;
-	public SignUpPage()
-	{
-		InitializeComponent();
-        _viewModel = new SignUpViewModel();
-        BindingContext = _viewModel;
+
+    public SignUpPage()
+    {
+        InitializeComponent();
+        BindingContext = _viewModel = new SignUpViewModel();
     }
 
     private void ShowPassword_Clicked(object sender, EventArgs e)

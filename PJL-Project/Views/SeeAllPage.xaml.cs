@@ -8,7 +8,6 @@ public partial class SeeAllPage : ContentPage
 	public SeeAllPage()
 	{
 		InitializeComponent();
-		_viewModel = new SeeAllViewModel();
-		BindingContext = _viewModel;
+		BindingContext = _viewModel = new SeeAllViewModel();
 	}
 }

@@ -8,7 +8,6 @@ public partial class TypeLoginPage : ContentPage
 	public TypeLoginPage()
 	{
 		InitializeComponent();
-		_viewModel = new TypeLoginViewModel();
-		BindingContext = _viewModel;
+		BindingContext = _viewModel = new TypeLoginViewModel();
     }
 }

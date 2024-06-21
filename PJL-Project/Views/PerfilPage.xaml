@@ -4,6 +4,7 @@
              xmlns:vm="clr-namespace:PJL_Project.ViewModels"
              x:DataType="vm:PerfilViewModel"
              x:Class="PJL_Project.Views.PerfilPage"
+             xmlns:models="clr-namespace:PJL_Project.Models;assembly=PJL.Models"
              Title="PerfilPage"
              Shell.NavBarIsVisible="False">
 
@@ -11,7 +12,7 @@
         <StackLayout>
             <Image Source="fundo_perfil.png"/>
             <Image Source="logo.svg" Margin="0,-241,0,0" WidthRequest="180"/>
-            <ImageButton Source="settings.svg" HorizontalOptions="End" Margin="0,73,20,0" WidthRequest="26" Command="{Binding SettingsCommand}"/>
+            <ImageButton Source="settings.svg" HorizontalOptions="End" Margin="0,73,20,0" WidthRequest="26" Command="{Binding NotFoundCommand}"/>
 
             <Frame WidthRequest="150"
                    HeightRequest="150"
@@ -30,7 +31,7 @@
                     Command="{Binding EscolherFotoCommand}"
                     Margin="120,-50,0,20"/>
 
-            <Label Text="Pessoa Pessoa"
+            <Label Text="Exemplo Nome"
                    FontSize="25"
                    HorizontalTextAlignment="Center"/>
 
@@ -40,9 +41,14 @@
                    HorizontalTextAlignment="Center"/>
 
             <HorizontalStackLayout Margin="20,15,20,10">
-                <Label Text="Personal Information" Margin="0,0,140,0" FontSize="20"/>
-                <ImageButton Source="edit_perfil.svg" WidthRequest="20"
-                             HeightRequest="20" Margin="0,-5,5,0"/>
+                <Label Text="Personal Information"
+                       Margin="0,0,140,0
+                       " FontSize="20"/>
+                <ImageButton Source="edit_perfil.svg"
+                             WidthRequest="20"
+                             HeightRequest="20"
+                             Margin="0,-5,5,0"
+                             Command="{Binding NotFoundCommand}"/>
                 <Label Text="Edit" FontSize="20"/>
             </HorizontalStackLayout>
 
@@ -63,7 +69,7 @@
 
                     <StackLayout Orientation="Horizontal">
                         <StackLayout Orientation="Horizontal" Spacing="5" HorizontalOptions="StartAndExpand">
-                            <Image Source="person.svg" WidthRequest="20"/>
+                            <Image Source="user_perfil.svg" WidthRequest="20"/>
                             <Label Text="Username" VerticalOptions="Center"/>
                         </StackLayout>
 
@@ -75,7 +81,7 @@
 
                     <StackLayout Orientation="Horizontal">
                         <StackLayout Orientation="Horizontal" Spacing="5" HorizontalOptions="StartAndExpand">
-                            <Image Source="email.svg" WidthRequest="20"/>
+                            <Image Source="email_perfil.svg" WidthRequest="20"/>
                             <Label Text="Email" VerticalOptions="Center"/>
                         </StackLayout>
 
@@ -130,11 +136,11 @@
 
                     <StackLayout Orientation="Horizontal">
                         <StackLayout Orientation="Horizontal" Spacing="5" HorizontalOptions="StartAndExpand">
-                            <Image Source="key.svg" WidthRequest="20"/>
+                            <Image Source="key_perfil.svg" WidthRequest="20"/>
                             <Label Text="Privacy And Cookie Policy" VerticalOptions="Center"/>
                         </StackLayout>
 
-                        <ImageButton Source="seta.svg" WidthRequest="25" Rotation="180" Margin="0,-12,0,-10"/>
+                        <ImageButton Source="seta.svg" WidthRequest="25" Rotation="180" Margin="0,-12,0,-10" Command="{Binding NotFoundCommand}"/>
                     </StackLayout>
 
                     <BoxView WidthRequest="360" HeightRequest="1" BackgroundColor="{StaticResource White}" Margin="0,8"/>
@@ -145,7 +151,7 @@
                             <Label Text="Ask Help-Desk" VerticalOptions="Center"/>
                         </StackLayout>
 
-                        <ImageButton Source="seta.svg" WidthRequest="25" Rotation="180" Margin="0,-12,0,-10"/>
+                        <ImageButton Source="seta.svg" WidthRequest="25" Rotation="180" Margin="0,-12,0,-10" Command="{Binding NotFoundCommand}"/>
                     </StackLayout>
 
                     <BoxView WidthRequest="360" HeightRequest="1" BackgroundColor="{StaticResource White}" Margin="0,8"/>
@@ -156,7 +162,7 @@
                             <Label Text="Log-Out" VerticalOptions="Center"/>
                         </StackLayout>
 
-                        <ImageButton Source="seta.svg" WidthRequest="25" Rotation="180" Margin="0,-12,0,-10"/>
+                        <ImageButton Source="seta.svg" WidthRequest="25" Rotation="180" Margin="0,-12,0,-10" Command="{Binding NotFoundCommand}"/>
                     </StackLayout>
 
                 </StackLayout>

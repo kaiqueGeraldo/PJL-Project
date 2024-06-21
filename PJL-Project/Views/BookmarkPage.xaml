@@ -2,6 +2,8 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:views="clr-namespace:PJL_Project.Views"
+             xmlns:vm="clr-namespace:PJL_Project.ViewModels"
+             x:DataType="vm:BookmarkViewModel"
              x:Class="PJL_Project.Views.BookmarkPage"
              Shell.NavBarIsVisible="False"
              Title="BookmarkPage">
@@ -9,6 +11,27 @@
         <StackLayout Margin="0,-1,0,0">
 
             <views:NavBar MaximumHeightRequest="120"/>
+
+            <StackLayout HorizontalOptions="Center"
+                         Spacing="30"
+                         Margin="0,100,0,0">
+                <Image Source="heart_bookmark"/>
+
+                <Label Text="Your favorite products here"
+                       HorizontalTextAlignment="Center"
+                       FontSize="26"
+                       FontAttributes="Bold"/>
+
+                <Label Text="Your list is still empty, but with the favorites icon, you can save everything here for whenever you want."
+                       HorizontalOptions="Center"
+                       WidthRequest="350"/>
+
+                <Button Text="CONTINUE SHOPPING"
+                        WidthRequest="300"
+                        HeightRequest="40"
+                        BackgroundColor="#98A8B7"
+                        Command="{Binding GoToShopCommand}"/>
+            </StackLayout>
 
         </StackLayout>
     </ContentPage.Content>

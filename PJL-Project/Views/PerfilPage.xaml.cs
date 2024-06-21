@@ -8,7 +8,6 @@ public partial class PerfilPage : ContentPage
 	public PerfilPage()
 	{
 		InitializeComponent();
-		_viewModel = new PerfilViewModel();
-		BindingContext = _viewModel;
+		BindingContext = _viewModel = new PerfilViewModel();
 	}
 }

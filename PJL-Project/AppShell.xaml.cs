@@ -10,9 +10,8 @@ namespace PJL_Project
             Routing.RegisterRoute("InfoPage", typeof(InfoPage));
             Routing.RegisterRoute("LoginPage", typeof(LoginPage));
             Routing.RegisterRoute("SignUpPage", typeof(SignUpPage));
-            Routing.RegisterRoute("ConfigPage", typeof(ConfigPage));
+            Routing.RegisterRoute("NotFoundPage", typeof(NotFoundPage));
             Routing.RegisterRoute("SeeAllPage", typeof(SeeAllPage));
-            Routing.RegisterRoute("NoItemsPage", typeof(NoItemsPage));
         }
     }
 }

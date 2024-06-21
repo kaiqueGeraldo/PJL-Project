@@ -3,7 +3,7 @@ using System.Net.Http.Json;
 
 namespace PJL_Project.Services
 {
-    internal class ApiService
+    public class ApiService
     {
         private readonly HttpClient _httpClient;
         public ApiService()

@@ -4,7 +4,6 @@
              xmlns:vm="clr-namespace:PJL_Project.ViewModels"
              x:DataType="vm:LoginViewModel"
              x:Class="PJL_Project.Views.LoginPage"
-             Title="LoginPage"
              BackgroundColor="#131316"
              Shell.NavBarHasShadow="False">
     <ContentPage.ToolbarItems>

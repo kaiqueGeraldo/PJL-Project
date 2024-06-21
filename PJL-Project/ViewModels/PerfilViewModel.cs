@@ -11,9 +11,9 @@ namespace PJL_Project.ViewModels
         }
 
         [RelayCommand]
-        private async Task Settings()
+        private async Task NotFound()
         {
-            await Shell.Current.GoToAsync("ConfigPage");
+            await Shell.Current.GoToAsync("NotFoundPage");
         }
 
         [ObservableProperty]

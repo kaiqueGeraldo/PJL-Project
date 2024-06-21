@@ -23,30 +23,18 @@ namespace PJL_Project.ViewModels
         [ObservableProperty]
         private string _senha;
 
+        [ObservableProperty]
+        private Usuario _usuario;
+
         [RelayCommand]
-        private async Task Cadastrar()
+        public async Task Cadastrar()
         {
-            var usuario = new Usuario
-            {
-                Nome = Nome,
-                Email = Email,
-                Senha = Senha
-            };
-
-            bool success = await _apiService.PostUsuario(usuario);
-
-            if (success)
-            {
-                await Shell.Current.GoToAsync("//HomePage");
-            }
-            else
-            {
-                await Shell.Current.DisplayAlert("Error", "Problema no cadastro. Tente Novamente!", "OK");
-            }
+            await Shell.Current.GoToAsync("//HomePage");
         }
 
+
         [RelayCommand]
-        private async Task Info()
+        public async Task Info()
         {
             await Shell.Current.GoToAsync("InfoPage");
         }

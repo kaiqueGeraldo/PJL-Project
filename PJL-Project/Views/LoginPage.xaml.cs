@@ -8,8 +8,7 @@ public partial class LoginPage : ContentPage
 	public LoginPage()
 	{
 		InitializeComponent();
-		_viewModel = new LoginViewModel();
-		BindingContext = _viewModel;
+		BindingContext = _viewModel = new LoginViewModel();
 	}
 
     private void ShowPassword_Clicked(object sender, EventArgs e)

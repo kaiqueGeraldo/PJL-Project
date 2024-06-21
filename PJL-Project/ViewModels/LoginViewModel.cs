@@ -20,22 +20,13 @@ namespace PJL_Project.ViewModels
         private string _senha;
 
         [RelayCommand]
-        private async Task Entrar()
+        public async Task Entrar()
         {
-            var usuario = await _apiService.AutenticarUsuario(Email, Senha);
-            if (usuario != null)
-            {
-                await Shell.Current.GoToAsync("//HomePage");
-            }
-            else
-            {
-                await Shell.Current.DisplayAlert("Erro", "Email ou senha inválidos. Tente Novamente!", "OK");
-            }
+            await Shell.Current.GoToAsync("//HomePage");
         }
 
-
         [RelayCommand]
-        private async Task Info()
+        public async Task Info()
         {
             await Shell.Current.GoToAsync("InfoPage");
         }

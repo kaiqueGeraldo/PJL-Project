@@ -2,11 +2,45 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PJL_Project.Views.InfoPage"
-             Title="InfoPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             xmlns:vm="clr-namespace:PJL_Project.ViewModels"
+             x:DataType="vm:InfoViewModel"
+             Title="Sobre Nós">
+
+    <ScrollView VerticalScrollBarVisibility="Never">
+        <StackLayout>
+            <Label 
+                Text="Quem trabalhou nesse protótipo?"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"
+                FontAttributes="Bold"
+                FontSize="20"
+                Margin="0,30"/>
+
+            <Image Source="kaique" Margin="0,0,0,10" WidthRequest="180"/>
+            <Grid HorizontalOptions="Center" ColumnDefinitions="*,*,*" ColumnSpacing="5">
+                <ImageButton Source="background_buttons.svg" Grid.Column="1" x:Name="Kaique" Command="{Binding KaiqueCommand}"/>
+                <Image Source="instagram" Grid.Column="1" WidthRequest="24"/>
+                <Label Text="Kaique Geraldo" VerticalTextAlignment="Center" Grid.Column="2"/>
+            </Grid>
+
+            <BoxView WidthRequest="350" HeightRequest="2" BackgroundColor="Black" Margin="0,30"/>
+
+            <Image Source="gabrielle" Margin="0,0,0,10" WidthRequest="180"/>
+            <Grid HorizontalOptions="Center" ColumnDefinitions="*,*,*" ColumnSpacing="5">
+                <ImageButton Source="background_buttons.svg" Grid.Column="1" x:Name="Gabi" Command="{Binding GabiCommand}"/>
+                <Image Source="instagram" Grid.Column="1" WidthRequest="24"/>
+                <Label Text="Gabrielle Milaré" VerticalTextAlignment="Center" Grid.Column="2"/>
+            </Grid>
+
+            <BoxView WidthRequest="350" HeightRequest="2" BackgroundColor="Black" Margin="0,30"/>
+
+            <Image Source="pontolio" Margin="0,0,0,10" WidthRequest="180"/>
+            <Grid HorizontalOptions="Center" ColumnDefinitions="*,*,*" ColumnSpacing="5" Margin="0,0,0,20">
+                <ImageButton Source="background_buttons.svg" Grid.Column="1" x:Name="Pontolio" Command="{Binding PontolioCommand}"/>
+                <Image Source="instagram" Grid.Column="1" WidthRequest="24"/>
+                <Label Text="Gustavo Pontólio" VerticalTextAlignment="Center" Grid.Column="2"/>
+            </Grid>
+
+        </StackLayout>
+    </ScrollView>
 </ContentPage>

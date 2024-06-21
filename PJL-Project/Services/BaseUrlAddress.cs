@@ -1,6 +1,6 @@
 ﻿namespace PJL_Project.Services
 {
-    internal class BaseUrlAddress
+    public static class BaseUrlAddress
     {
         private const string Url = "http://10.0.2.2:5214";
 
